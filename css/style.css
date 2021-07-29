@@ -2,7 +2,7 @@
   font-size: 35px;
   color: #43425d;
 
-  margin-left: 200px;
+  margin-left: 100px;
   letter-spacing: 5px;
   text-indent: 18px;
 }
@@ -16,7 +16,7 @@
 .tittle-1 {
   font-size: 35px;
   color: #43425d;
-  margin-left: 200px;
+  margin-left: 100px;
   margin-top: 10px;
   margin-bottom: 10px;
   letter-spacing: 6px;
@@ -25,8 +25,8 @@
 .tittle-2 {
   font-size: 35px;
   color: #43425d;
-  margin-left: 200px;
-  letter-spacing: 5px;
+  margin-left: 100px;
+  letter-spacing: 6px;
 }
 
 .div-h-2 {
@@ -61,13 +61,6 @@
   border-style: outset;
   border-right: none;
 }
-
-/* .circle {
-  height: 10px;
-  width: 5px;
-  background-color: aqua;
-  border-radius: 6%;
-} */
 
 .box {
   display: flex;
@@ -146,4 +139,40 @@
   text-align: center;
   padding-top: 10px;
   padding-left: 30%;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.colored-img {
+  position: relative;
+}
+
+.logo-img {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  text-align: center;
 }
