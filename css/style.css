@@ -2,8 +2,8 @@
   font-size: 35px;
   color: #43425d;
 
-  margin-left: 100px;
-  letter-spacing: 5px;
+  margin-left: 230px;
+  letter-spacing: 4px;
   text-indent: 18px;
 }
 
@@ -16,16 +16,16 @@
 .tittle-1 {
   font-size: 35px;
   color: #43425d;
-  margin-left: 100px;
+  margin-left: 230px;
   margin-top: 10px;
   margin-bottom: 10px;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
 }
 
 .tittle-2 {
   font-size: 35px;
   color: #43425d;
-  margin-left: 100px;
+  margin-left: 220px;
   letter-spacing: 6px;
 }
 
@@ -39,7 +39,7 @@
   text-align: center;
   color: #817e7e;
   size: 18px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .inputs {
