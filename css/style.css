@@ -2,7 +2,7 @@
   font-size: 35px;
   color: #43425d;
 
-  margin-left: 230px;
+  margin-left: 20px;
   letter-spacing: 4px;
   text-indent: 18px;
 }
@@ -16,7 +16,7 @@
 .tittle-1 {
   font-size: 35px;
   color: #43425d;
-  margin-left: 230px;
+  margin-left: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
   letter-spacing: 4px;
@@ -25,7 +25,7 @@
 .tittle-2 {
   font-size: 35px;
   color: #43425d;
-  margin-left: 220px;
+  margin-left: 40px;
   letter-spacing: 6px;
 }
 
@@ -60,6 +60,10 @@
   border-color: #f5f5f7;
   border-style: outset;
   border-right: none;
+}
+
+input:focus {
+  outline: none;
 }
 
 .box {
@@ -129,7 +133,7 @@
   display: flex;
   color: #ffffff;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 12px;
   padding-left: 30%;
 }
 
@@ -137,7 +141,7 @@
   display: flex;
   color: #4d4f5c;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 12px;
   padding-left: 30%;
 }
 
@@ -171,8 +175,64 @@
 
 .logo-img {
   position: absolute;
-  top: 20%;
+  top: 35%;
   left: 50%;
-  transform: translate(-50%, -20%);
+  transform: translate(-35%, -50%);
   text-align: center;
+}
+
+/* 2 page */
+
+.singup-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-2 {
+  width: 180px;
+  height: 25px;
+  display: block;
+  margin-left: 10px;
+  background-color: E8E8E8;
+  border-color: #f5f5f7;
+  border-style: outset;
+  border-right: none;
+}
+
+.input-2:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.box-2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-right: 120px;
+}
+.conditions {
+  color: #43425d;
+  font-size: 15px;
+}
+
+.circle-4 {
+  width: 160px;
+  height: 40px;
+  background-color: #43425d;
+  border-radius: 4%;
+  margin: 0 auto;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.accountcheck-div {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  margin-right: 40px;
+  color: #585454;
+  font-size: 15px;
+  text-decoration: underline;
 }
