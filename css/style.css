@@ -236,3 +236,58 @@ input:focus {
   font-size: 15px;
   text-decoration: underline;
 }
+
+/* page 3 */
+
+.splitleft-1 {
+  height: 100%;
+  width: 20%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #43425d;
+}
+
+.centered-1 {
+  position: relative;
+  top: 0%;
+  left: 10%;
+  transform: translate(-0%, -10%);
+  text-align: center;
+}
+.log-img {
+  position: absolute;
+  top: 15%;
+  left: 0%;
+  transform: translate(-15%, -0%);
+  text-align: center;
+  padding-left: 13px;
+}
+
+.Dashboard {
+  padding-top: 120px;
+  font-size: 22px;
+  color: #ffffff;
+  font-weight: bold;
+  padding-left: 12px;
+}
+
+.icon {
+  display: flex;
+  padding-bottom: 15px;
+}
+
+.fas {
+  padding-right: 7px;
+  color: #a3a0fb;
+}
+
+.splitright2 {
+  height: 100%;
+  width: 80%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  background-color: #f5f5f0;
+  right: 0;
+}
