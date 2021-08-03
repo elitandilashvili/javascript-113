@@ -394,3 +394,27 @@ table {
   border-radius: 8%;
   margin-top: 27px;
 }
+
+.DIVS {
+  display: flex;
+  justify-content: space-between;
+  padding: 8%;
+}
+
+.dashdiv {
+  background-color: #ffffff;
+  width: 270px;
+  height: 80px;
+}
+.dashh4 {
+  color: #707070;
+  font-size: 11px;
+  margin-bottom: 15px;
+  padding: 5%;
+  font-weight: bold;
+}
+.dashnumb {
+  color: #4d4f5c;
+  font-weight: bold;
+  padding-left: 15px;
+}
