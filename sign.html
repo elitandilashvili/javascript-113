@@ -12,11 +12,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="css/reset.css">
      <link rel="stylesheet" href="css/style.css">
-     
-     <script src="./scripts.js"></script>
-    <script src="./mnscripts.js"></script>
+     <script src="./mnscripts.js"></script>
     
 </head>
 <body>
@@ -33,7 +32,7 @@
 
 
      <div  class="split right">
-         <div class="centered">
+        <div class="centered">
              
             <div class="sign-div">
                 <h4 class="tittle">ACADEMY</h4>
@@ -60,6 +59,7 @@
             </section>
             
             <section class="section-1">
+           
             <div class="inputs">
             
             <div class="input-wraper">
@@ -73,8 +73,8 @@
             </div>
             
             <div class="input-wraper">
-                <label for="pwd"></label>
-                <input class="input" type="password" id="pwd" name="pwd"  placeholder="Password">  
+                <label for="password"></label>
+                <input class="input" type="password" id="password"   placeholder="Password" required>  
             
             </div>
             
@@ -82,11 +82,10 @@
                 <label for="confirm_password"></label>
                 <input class="input" type="password" placeholder="Confirm Password" id="confirm_password" required>
             </div>
-            
-            </div>
-            
+
+        </div>
             </section>
-            
+           
             <section class="box-2">
             <input type="checkbox" value="isconditions" id="conditions"> 
             <label class="conditions" for="conditions">I agree with terms and conditions</label>
@@ -99,9 +98,9 @@
             <section>
             
             <div class="block-div">
-                <div class="circle-4">
+                <div >
               
-                    <h3 class="circle-2-text-1"> <a style="color: #ffffff;" href="./todo.html"> Sign up</a> </h3>
+                    <button style="background-color: #43425D;margin-top: 20px; margin-left: 40px; color: white;" type="submit" class="pure-button pure-button-primary" onclick=""> sign in</button>
             
                 </div>
             </div>
