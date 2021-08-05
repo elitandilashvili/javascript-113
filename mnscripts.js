@@ -1,47 +1,74 @@
-// const request = axios.get("https://jsonplaceholder.typicode.com/todos")
+const request = axios.get("https://jsonplaceholder.typicode.com/todos")
 
-// request.then((response)=>{
-//     console.log(response.data)
-// })
-// function validateForm(){
+request.then((response)=>{
+   console.log(response.data)
+})
 
+function paginate(
+    totalItems,
+    currentPage = 1,
+    pageSize = 10,
+    maxPages = 10
+  ) {
    
-// var pw1 = document.getElementById("password").Value;
-// var pw2 = document.getElementById("confirm_password").value; 
-
-// if(pw1 =="") {
-//     document.getElementById("message1").innerHTML = "**Fill the password please!";  
-//      return false;  
-// }
-// if(pw2 =="") {
-//     document.getElementById("message2").innerHTML = "**Fill the password please!";  
-//      return false;  
-// }
-// if(pw1.length < 6) {  
-//     document.getElementById("message1").innerHTML = "**Password length must be  6 characters";  
-//     return false;  
-//  }  
- 
-
-//  if(pw1.length > 8) {  
-//     document.getElementById("message1").innerHTML = "**Password length must not exceed 15 characters";  
-//     return false;  
-//  } 
- 
-//  else {  
-//     alert("Password is correct");  
-//  }  
-
-//  if(pw1 != pw2) {  
-//     document.getElementById("message2").innerHTML = "**Passwords are not same";  
-//     return false;  
-// }
-// else {  
-//     alert ("Your password created successfully");  
+    let totalPages = Math.ceil(totalItems / pageSize);
+  
+   
+    if (currentPage < 1) { 
+        currentPage = 1; 
+    } else if (currentPage > totalPages) { 
+        currentPage = totalPages; 
+    }
+  
+    let startPage, endPage;
+    if (totalPages <= maxPages) {
+      
+      startPage = 1;
+      endPage = totalPages;
+    } else {
+      
+      let maxPagesBeforeCurrentPage = Math.floor(maxPages / 2);
+      let maxPagesAfterCurrentPage = Math.ceil(maxPages / 2) - 1;
+      if (currentPage <= maxPagesBeforeCurrentPage) {
+        
+        startPage = 1;
+        endPage = maxPages;
+      } else if (currentPage + maxPagesAfterCurrentPage >= totalPages) {
+       
+        startPage = totalPages - maxPages + 1;
+        endPage = totalPages;
+      } else {
+       
+        startPage = currentPage - maxPagesBeforeCurrentPage;
+        endPage = currentPage + maxPagesAfterCurrentPage;
+      }
+    }
+  
     
-//   }  
+    let startIndex = (currentPage - 1) * pageSize;
+    let endIndex = Math.min(startIndex + pageSize - 1, totalItems - 1);
+  
+    
+    let pages = Array.from(Array((endPage + 1) - startPage).keys()).map(i => startPage + i);
+  
+    
+    return {
+      totalItems: totalItems,
+      currentPage: currentPage,
+      pageSize: pageSize,
+      totalPages: totalPages,
+      startPage: startPage,
+      endPage: endPage,
+      startIndex: startIndex,
+      endIndex: endIndex,
+      pages: pages
+    };
+  }
+  
+  console.log(paginate(200));
+//   console.log(paginate(totalItems = 200, currentPage = 8, pageSize = 10, maxPages = 10).startIndex);
 
-// }
 
 
- 
+
+  

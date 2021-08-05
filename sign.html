@@ -128,12 +128,7 @@
 		{
 			alert("please enter email.");
 		}
-        if(pwd=!pass){
-            alert("Passwords do not match.");
-            return false;
-        } else{
-            return true;
-        }
+       
        
 		 if(pwd=='')
 		{
@@ -143,24 +138,26 @@
 		{
 			alert("Enter valid email id.");
 		}
+       
 		else if(pwd.length < 6 || pwd.length > 6)
 		{
 			alert("Password min and max length is 6.");
 		}
 		else
 		{
-	alert('Thank You for Login');
+	        alert('Thank You for Login');
   
-    
 			}
 	}
+        
+    
 	
-	function clearFunc()
-	{
-		document.getElementById("email").value="";
-		document.getElementById("pwd1").value="";
-        document.getElementById("confirm_password").value=""
-	}	
+	// function clearFunc()
+	// {
+	// 	document.getElementById("email").value="";
+	// 	document.getElementById("pwd1").value="";
+    //     document.getElementById("confirm_password").value="";
+	// }	
 	
                     </script>
                 </section>

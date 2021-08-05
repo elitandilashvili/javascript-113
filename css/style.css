@@ -484,3 +484,23 @@ table {
   border-color: #3b86ff;
   border-radius: 5%;
 }
+
+.pagination a {
+  color: black;
+  float: right;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.pagination a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination-div {
+  padding-bottom: 40px;
+}
