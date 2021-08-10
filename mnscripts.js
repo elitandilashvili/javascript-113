@@ -1,74 +1,74 @@
-const request = axios.get("https://jsonplaceholder.typicode.com/todos")
 
-request.then((response)=>{
-   console.log(response.data)
-})
 
-function paginate(
-    totalItems,
-    currentPage = 1,
-    pageSize = 10,
-    maxPages = 10
-  ) {
+
+   function addRow(todo) {
+    var table = document.getElementById("Todoraws");
+                      
+    var row = document.createElement("TR");  
+    
+    var name = document.createElement("TD");
+    name.innerHTML = todo.userId;
+    row.appendChild(name)
+  
+    var completed = document.createElement("TD");
+    completed.innerHTML = todo.completed
+    row.appendChild(completed)
+  
+    
+
+    var id =document.createElement("TD");
+    id.innerHTML = todo.id
+    row.appendChild(id)
    
-    let totalPages = Math.ceil(totalItems / pageSize);
-  
-   
-    if (currentPage < 1) { 
-        currentPage = 1; 
-    } else if (currentPage > totalPages) { 
-        currentPage = totalPages; 
-    }
-  
-    let startPage, endPage;
-    if (totalPages <= maxPages) {
-      
-      startPage = 1;
-      endPage = totalPages;
-    } else {
-      
-      let maxPagesBeforeCurrentPage = Math.floor(maxPages / 2);
-      let maxPagesAfterCurrentPage = Math.ceil(maxPages / 2) - 1;
-      if (currentPage <= maxPagesBeforeCurrentPage) {
-        
-        startPage = 1;
-        endPage = maxPages;
-      } else if (currentPage + maxPagesAfterCurrentPage >= totalPages) {
-       
-        startPage = totalPages - maxPages + 1;
-        endPage = totalPages;
-      } else {
-       
-        startPage = currentPage - maxPagesBeforeCurrentPage;
-        endPage = currentPage + maxPagesAfterCurrentPage;
-      }
-    }
-  
-    
-    let startIndex = (currentPage - 1) * pageSize;
-    let endIndex = Math.min(startIndex + pageSize - 1, totalItems - 1);
-  
-    
-    let pages = Array.from(Array((endPage + 1) - startPage).keys()).map(i => startPage + i);
-  
-    
-    return {
-      totalItems: totalItems,
-      currentPage: currentPage,
-      pageSize: pageSize,
-      totalPages: totalPages,
-      startPage: startPage,
-      endPage: endPage,
-      startIndex: startIndex,
-      endIndex: endIndex,
-      pages: pages
-    };
+
+    var title =document.createElement("TD");
+    title.innerHTML = todo.title.substring(0,20)
+    row.appendChild(title)
+    table.appendChild(row);
   }
   
-  console.log(paginate(200));
-//   console.log(paginate(totalItems = 200, currentPage = 8, pageSize = 10, maxPages = 10).startIndex);
-
-
-
-
   
+  
+
+function addRows(minIndex, maxIndex) {
+  const request = axios.get("https://jsonplaceholder.typicode.com/todos")
+  request.then((response)=>{
+    var table = document.getElementById("Todoraws");
+     table.innerHTML=""
+    for (let i = minIndex; i<=maxIndex; i++) {
+      addRow(response.data[i])
+    }
+  })
+}
+
+
+addRows(0, 9)
+
+
+
+
+function addPagination(numbpages,perpage){
+ var pagination=document.getElementById("pagination")
+ for(let i=numbpages; i>0; i--){
+   var numb= document.createElement("a")
+   numb.innerHTML =(i)
+   numb.onclick=function(){
+    addRows(perpage*(i-1),perpage*i-1)
+   }
+   pagination.appendChild(numb)
+ }
+ 
+}
+addPagination(20,10)
+
+
+
+
+
+ 
+
+
+
+
+
+
