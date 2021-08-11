@@ -130,25 +130,27 @@
 		if(uname =='')
 		{
 			alert("please enter email.");
+
+         
 		}
        
        
-		 if(pwd=='')
+		else if(pwd=='')
 		{
         	alert("enter the password");
 		}
-		else if(!filter.test(uname))
+		 if(!filter.test(uname))
 		{
 			alert("Enter valid email id.");
 		}
        
-		else if(pwd.length < 6 || pwd.length > 6)
+		 if(pwd.length < 6 || pwd.length > 6)
 		{
 			alert("Password min and max length is 6.");
 		}
-		else
+		else if( pwd==pass)
 		{
-	        alert('Thank You for Login');
+            window.location.href = "http://youtube.com";
             
          
   

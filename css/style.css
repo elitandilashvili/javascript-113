@@ -113,12 +113,21 @@ input:focus {
 }
 
 .circle-2 {
-  width: 160px;
+  width: 250px;
   height: 40px;
   background-color: #43425d;
   border-radius: 4%;
   margin: 0 auto;
   margin-right: 10px;
+}
+
+.circle-2-div {
+  width: 160px;
+  height: 40px;
+  background-color: #43425d;
+  border-radius: 4%;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 .circle-3 {
   width: 160px;
