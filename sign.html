@@ -23,10 +23,12 @@
 
     <div class="split left">
         <div class="centered">
-            
-            <img src="image/Group 244.png" alt="colored" class="colored-img">
-            <img src="image/Image 2.png"alt="logo" class="logo-img">
+            <a href="./index.html">
+                <img src="image/Group 244.png" alt="colored" class="colored-img">
+                <img src="image/Image 2.png"alt="logo" class="logo-img">
            
+            </a>
+          
                     
         </div> 
     
@@ -103,6 +105,7 @@
                                     <td>
                                       
                                         <input class="input"   type="submit"  value="Login" class="btn" onClick="login()" style="margin-top: 25px; width: 180px;height: 50px;background-color: #43425D;color: white;" />
+                                        <h3 class="circle-2-text-1"  > <a href="./todo.html"> Login</a> </h3>
                                     </td>
                                 </tr>
                             </div>
@@ -139,12 +142,12 @@
 		{
         	alert("enter the password");
 		}
-		 if(!filter.test(uname))
+		else if(!filter.test(uname))
 		{
 			alert("Enter valid email id.");
 		}
        
-		 if(pwd.length < 6 || pwd.length > 6)
+		else if(pwd.length < 6 || pwd.length > 6)
 		{
 			alert("Password min and max length is 6.");
 		}
